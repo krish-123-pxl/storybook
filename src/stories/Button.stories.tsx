@@ -1,11 +1,20 @@
 import Button from "./Button";
-import React, { Component } from "react";
+import React, { Children, Component } from "react";
 
 export default {
-    title:"Button",
-    Component:Button
+    title:"Form/Button",
+    Component:Button,
 }
-export const primary=()=><Button variant="primary">Primary</Button>
-export const secondary=()=><Button variant="secondary">Secondary</Button>
-export const success=()=><Button variant="success">Success</Button>
-export const danger=()=><Button variant="danger">Danger</Button>
+
+const Template = args => <Button {...args}/>
+
+export const Success = Template.bind({});
+Success.args={
+    variantColor:'green',
+    children:'Success'
+}
+export const Danger = Template.bind({});
+Danger.args={
+    variantColor:'red',
+    children:'Danger'
+}

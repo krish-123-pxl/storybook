@@ -1,10 +1,11 @@
 import React from "react";
+import './Button.css'
 
 function Button(props){
-    const { variant = "primary" , children,...props } = props;
+    const { variant = "primary" , children,...restProps } = props;
 
     return (
-        <button className={`button ${variant}` {...props}}>
+        <button style={{backgroundColor:`${restProps.variantColor}`}} className={`button ${variant}`} {...restProps}>
             {children}
         </button>
     );
