@@ -1,13 +1,21 @@
 import React from "react";
 import './Button.css'
+// import { action,actions } from '@storybook/addon-actions'
+// import PropTypes from 'prop-types';
+
 
 function Button(props){
-    const { variant = "primary" , children,...restProps } = props;
 
     return (
-        <button style={{backgroundColor:`${restProps.variantColor}`}} className={`button ${variant}`} {...restProps}>
-            {children}
+        <button onClick={props.onClick} style={{backgroundColor:`${props.variantColor}`,width:`${props.width}`}} className={`button ${props.variantColor}`} {...props}>
+            {props.innerText}
         </button>
     );
 }
 export default Button;
+// Button.propTypes = {
+//     onClick:PropTypes.func
+// }
+// Button.defaultProps = {
+//     onClick:undefined,
+// }
