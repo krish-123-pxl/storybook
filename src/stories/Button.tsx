@@ -7,7 +7,7 @@ import './Button.css'
 function Button(props){
 
     return (
-        <button onClick={props.onClick} style={{backgroundColor:`${props.variantColor}`,width:`${props.width}`}} className={`button ${props.variantColor}`} {...props}>
+        <button onClick={props.onClick} style={{color:`${props.textColor}`,backgroundColor:`${props.variantColor}`,width:`${props.width}`}} className={`button ${props.variantColor}`} {...props}>
             {props.innerText}
         </button>
     );

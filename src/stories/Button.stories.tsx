@@ -16,7 +16,8 @@ Success.args = {
     variantColor:'green',
     innerText:'Primary',
     width:'20%',
-    onClick:action('btn clicked')
+    textColor:'black',
+    onClick:action(('btn clicked'))
 }
 
     // export const Success = () => <Button variantColor="primary">Primary</Button>
