@@ -9,14 +9,13 @@ export default {
     }
 }
 
-
 export const Template = () => {
     const [isModalOpen, setIsModalOpen] = useState(true);
     const closeModal = () => {
         setIsModalOpen(false);
     }
     const openModal = () => {
-        setIsModalOpen(true)
+        setIsModalOpen(true);
     }
 
     return (
@@ -29,7 +28,3 @@ export const Template = () => {
         </div>
     )
 }
-// export const Primary = Template.bind({});
-// Primary.args = {
-//     isOpen:false
-// }

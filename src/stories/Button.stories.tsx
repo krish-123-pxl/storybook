@@ -5,25 +5,23 @@ export default {
     title:"Form/Button",
     Component:Button,
     argTypes:{
-        variantColor:{control:'color'},
+        variantColor:{control:'text'},
         // width:{control:'select',options:['10%','20%','30%','50%','80%']}
     }
 }
+interface ButtonProps{
+    innerText:string;
+    width:string;
+    textColor:string;
+    onClick:()=>void;
+}
 
-const Template = args => <Button {...args}/>
-export const Success = Template.bind({});
-Success.args = {
+const Template:typeof Button = args => <Button {...args}/>
+export const MyButton:React.FC<ButtonProps> = Template.bind({});
+MyButton.args = {
     variantColor:'green',
     innerText:'Primary',
     width:'20%',
-    textColor:'black',
-    onClick:action(('btn clicked'))
+    textColor:'white',
+    onClick:action(('btn clicked')) 
 }
-
-    // export const Success = () => <Button variantColor="primary">Primary</Button>
-
-// export const Danger = Template.bind({});
-// Danger.args={
-//     variantColor:'red',
-//     children:'Danger'
-// }
